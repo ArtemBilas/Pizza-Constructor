@@ -290,7 +290,6 @@ nav div::after{
     border-radius: 5px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
 }
-
 .drinks h2 {
     text-align: center;
     margin-top: 25px;
@@ -575,7 +574,9 @@ footer .social img:hover {
     .drinks {
         width: 90%;
     }
-
+    .pizzas{
+        width: 90%;
+    }
     footer {
         flex-flow: column nowrap;
     }
