@@ -502,6 +502,7 @@ h2{
 /* ---- Footer ---- */
 footer {
     max-width: 1280px;
+    height: 150px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
