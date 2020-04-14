@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pizza Main Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/Title-icon/pizza.svg" alt="logo">
+            <h1>Pizza</h1>
+        </div>
+        <nav>
+            <a id="pizza-page" href="#">Pizza</a>
+            <a id="constructor-page" href="#">Constructor</a>
+            <div><a href="./pages/order.html"><img src="img/Title-icon/cart.svg" alt="cart"></a></div>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+
+        <div class="center-menu">
+
+            <div class='total'>
+                <h3>Total Amount:</h3>
+                <div>
+                    <div class="out">
+                        <span>$</span>
+                        <p id='out-total'></p>
+                    </div>
+                    <div>
+                        <button type="button" id='order-btn'>To order</button>
+                        <button type="button" id='cancel-order-btn'>Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="pizzas">
+                <h2>Pizza:</h2>
+                <div class="pizza-variety">
+                    <div class="pizzas-position" data-name="Quattro Formaggi" data-value="6" data-group="pizza"> 
+                        <h4>Quattro Formaggi</h4>
+                        <img src="img/pizza/quadro.jpg" alt="">
+                        <p>
+                            Pizza with Pecorino, Gorgonzola, Asiago, Goudse and Mozzarella.
+                        </p>
+                        <p>	&#8709; 30cm w:450g</p>
+                        <p><span>6$</span></p>
+                        <button class="btn-pizza">Add to order</button>
+                    </div>
+                    <div class="pizzas-position" data-name="Margarita" data-value="4.5" data-group="pizza"> 
+                        <h4>Margarita</h4>
+                        <img src="img/pizza/margarita.jpg" alt="">
+                        <p>
+                            Pizza with Mozzarella, tomato sauce and oregano.
+                        </p>
+                        <p>	&#8709; 30cm w:450g</p>
+                        <p><span>4.5$</span></p>
+                        <button class="btn-pizza">Add to order</button>
+                    </div>
+                    <div class="pizzas-position" data-name="Diablo" data-value="5.5" data-group="pizza"> 
+                        <h4>Diablo</h4>
+                        <img src="img/pizza/diabolo.jpg" alt="">
+                        <p>
+                            Pizza with Mozzarella, tomato sauce, pepperoni and oregano.
+                        </p>
+                        <p>	&#8709; 30cm w:450g</p>
+                        <p><span>5.5$</span></p>
+                        <button class="btn-pizza">Add to order</button>
+                    </div>
+                    <div class="pizzas-position" data-name="Calzone" data-value="6.5" data-group="pizza"> 
+                        <h4>Calzone</h4>
+                        <img src="img/pizza/kalzone.jpg" alt="">
+                        <p>
+                            Pizza with Mozzarella, tomato sauce, oregano, mushrooms, basil, prosciutto koto.
+                        </p>
+                        <p>	&#8709; 30cm w:450g</p>
+                        <p><span>6.5$</span></p>
+                        <button class="btn-pizza">Add to order</button>
+                    </div>
+                    <div class="pizzas-position" data-name="Di Mare" data-value="7.5" data-group="pizza"> 
+                        <h4>Di Mare</h4>
+                        <img src="img/pizza/di_mare.jpg" alt="">
+                        <p>
+                            Pizza with seafoods like salmon, crab, octopus, squid, mollusks, tomato sauce, seasoning and cheese Mozzarella.
+                        </p>
+                        <p>	&#8709; 30cm w:450g</p>
+                        <p><span>7.5$</span></p>
+                        <button class="btn-pizza">Add to order</button>
+                    </div>
+                    <div class="pizzas-position" data-name="Focaccia" data-value="3.5" data-group="pizza"> 
+                        <h4>Focaccia</h4>
+                        <img src="img/pizza/focacha.jpg" alt="">
+                        <p>Classic Focaccia like we love</p>
+                        <p>	&#8709; 30cm w:250g</p>
+                        <p><span>3.5$</span></p>
+                        <button class="btn-pizza">Add to order</button>
+                    </div>
+                </div>
+               
+            </section>
+
+            <section class="size">
+                <h2>Size:</h2>
+                <p>(Click to Choose)</p>
+
+                <div class="size-container">
+                    <div class="form-size" data-name="Small" data-value="1.5" data-group="size">
+                        <h3>Small</h3>
+                        <p>S</p>
+                        <span>1.5$</span>
+                    </div>
+
+                    <div class="form-size" data-name="Medium" data-value="2" data-group="size">
+                        <h3>Medium</h3>
+                        <p>M</p>
+                        <span>2$</span>
+                    </div>
+
+                    <div class="form-size" data-name="Large" data-value="3" data-group="size">
+                        <h3>Large</h3>
+                        <p>L</p>
+                        <span>3$</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="pizza-adds">
+
+                <h2>Adds:</h2>
+                <p>(Click to Choose)</p>
+
+                <div class="adds-portion">
+                    <div class="adds" data-name="Chiken" data-value="1.2" data-group="adds">
+                        <img src="img/Adds/chiken.svg" alt="chiken">
+                        <p>chiken</p>
+                        <span>1.2$</span>
+                    </div>
+
+                    <div class="adds" data-name="Bacon" data-value="1.2" data-group="adds">
+                        <img src="img/Adds/becon.svg" alt="bacon">
+                        <p>bacon</p>
+                        <span>1.2$</span>
+                    </div>
+
+                    <div class="adds" data-name="Salami" data-value="1.5" data-group="adds">
+                        <img src="img/Adds/salami.svg" alt="salami">
+                        <p>salami</p>
+                        <span>1.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Tomatos" data-value="0.5" data-group="adds">
+                        <img src="img/Adds/tomato.svg" alt="tomatos">
+                        <p>tomatos</p>
+                        <span>1.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Paprika" data-value="0.5" data-group="adds">
+                        <img src="img/Adds/papprika.svg" alt="paprika">
+                        <p>paprika</p>
+                        <span>0.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Olive" data-value="1" data-group="adds">
+                        <img src="img/Adds/olive.svg" alt="olive">
+                        <p>olive</p>
+                        <span>1$</span>
+                    </div>
+
+                    <div class="adds" data-name="Mushrooms" data-value="0.4" data-group="adds">
+                        <img src="img/Adds/mashrooms.svg" alt="mushrooms">
+                        <p>mushrooms</p>
+                        <span>0.4$</span>
+                    </div>
+
+                    <div class="adds" data-name="Pineapple" data-value="2" data-group="adds">
+                        <img src="img/Adds/pineapple.svg" alt="pineapple">
+                        <p>pineapple</p>
+                        <span>2$</span>
+                    </div>
+
+                    <div class="adds" data-name="Mozzarella" data-value="1.5" data-group="adds">
+                        <img src="img/Adds/cheese.svg" alt="mozzarella">
+                        <p>mozzarella </p>
+                        <span>1.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Shrimps" data-value="3" data-group="adds">
+                        <img src="img/Adds/shrimps.svg" alt="shrimps">
+                        <p>shrimps</p>
+                        <span>3$</span>
+                    </div>
+
+                    <div class="adds" data-name="Lettuce" data-value="0.5" data-group="adds">
+                        <img src="img/Adds/salat.svg" alt="lettuce">
+                        <p>lettuce</p>
+                        <span>0.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Red Pepper" data-value="1.5" data-group="adds">
+                        <img src="img/Adds/red papper.svg" alt="red-pepper">
+                        <p>Red Pepper</p>
+                        <span>1.5$</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="double-adds">
+
+                <h2>Double-Adds:</h2>
+                <p>(Click to Choose)</p>
+
+                <div class="double-portion">
+                    <div class="adds" data-name="Double-Cheese Boards" data-value="1" data-group="double-adds">
+                        <img src="img/Adds/cheese border.svg" alt="double-Cheese">
+                        <p>Cheese Boards</p>
+                        <span>1$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-souse" data-value="1" data-group="double-adds">
+                        <img src="img/Adds/sauce.svg" alt="Double-souse">
+                        <p>souse</p>
+                        <span>1$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-salami" data-value="2.5" data-group="double-adds">
+                        <img src="img/Adds/salamiDouble.svg" alt="Double-salami">
+                        <p>salami</p>
+                        <span>2.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-tomatoes" data-value="1" data-group="double-adds">
+                        <img src="img/Adds/tomatoes double.svg  " alt="Double-tomatoes">
+                        <p>tomatoes</p>
+                        <span>1$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-paprika" data-value="1.5" data-group="double-adds">
+                        <img src="img/Adds/paprika.svg" alt="Double-paprika">
+                        <p>paprika</p>
+                        <span>1.5$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-olives" data-value="1" data-group="double-adds">
+                        <img src="img/Adds/olives double.svg" alt="Double-olives">
+                        <p>olives</p>
+                        <span>1$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-mozzarella" data-value="2" data-group="double-adds">
+                        <img src="img/Adds/mozzarella double.svg" alt="Double-mozzarella">
+                        <p>mozzarella </p>
+                        <span>2$</span>
+                    </div>
+
+                    <div class="adds" data-name="Double-mushrooms" data-value="1" data-group="double-adds">
+                        <img src="img/Adds/mushrooms double.svg" alt="Double-mushrooms">
+                        <p>mushrooms</p>
+                        <span>1$</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="drinks">
+
+                <h2>Drinks:</h2>
+                <p>(Click to Choose)</p>
+
+                <div class="drink-items">
+                    <div class="posit-drink" data-name="Coco-Cola" data-value="0.5" data-group="drink">
+                        <img src="img/Drinks/cola.png" alt="Coke">
+                        <p>Coke</p>
+                        <span>0.5$</span>
+                    </div>
+
+                    <div class="posit-drink" data-name="Sprite" data-value="0.5" data-group="drink">
+                        <img src="img/Drinks/sprite.png" alt="Sprite">
+                        <p>Sprite</p>
+                        <span>0.5$</span>
+                    </div>
+
+                    <div class="posit-drink" data-name="Fanta" data-value="0.5" data-group="drink">
+                        <img src="img/Drinks/fanta.png" alt="Fanta">
+                        <p>Fanta</p>
+                        <span>0.5$</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <section class="order-list">
+            <h4 class="total-amount">Total:</h4>
+            <div class="order-list-reference">
+                <p class="message-order">
+                    Thank you very much that you made your dision here.
+                    We are glad to make this order for.
+                    If something wrong, tall us and we will solve all problems.
+                    Tips at your discretion.
+                </p>
+            </div>
+            <div class="order-buttons">
+                <button class="order-cancel-btn">Cancel Order</button>
+                <button type="submit" class="order-confirm-btn">Confirm</button> 
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/artem-bilas-b50905182/" target="_blank"><img
+                    src="img/Title-icon/linkedin.svg" alt="linkedin"></a>
+            <a href="mailto:artembilas@gmail.com" target="_blank"><img src="img/Title-icon/gitMain.svg" alt="mail"></a>
+            <a href="https://github.com/ArtemBilas?tab=repositories" target="_blank" X-UA-Compatible><img
+                    src="img/Title-icon/github-icon.svg" alt="git_hub"></a>
+        </div>
+
+        <div class="copyright">
+            <p>© CopyRight 2019 <span>by Bilas A.</span></p>
+        </div>
+
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

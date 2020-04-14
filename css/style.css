@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: bisque;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.hide{
+    display: none;
+}
+
+.active {
+    background: tomato;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+span{
+    background-color: rgb(255, 255, 162);
+    border-radius: 5px;
+    padding: 0 8px 0 8px ;
+}
+
+/* ---- Modal Window ---- */
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(120,128,128,0.5);
+    z-index: 10;
+}
+.modal-content{
+    width: 50%;
+    margin: 150px auto;
+    background-color: rgb(247, 224, 196);
+    border: 4px solid rgb(255, 255, 162);
+    border-radius: 5px;
+}
+.modal-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+.modal-header span{
+    font-size: 1.2rem;
+}
+.modal-body{
+    margin-top: 30px;
+    text-align: center;
+}
+.modal-footer{
+    margin-top: 40px;
+    text-align: center;
+}
+.modal-footer button{
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 162);
+    border: none;
+    outline: none;
+}
+.modal-footer button:hover{
+    background-color: tomato;
+    transition: all 0.3s;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+/* ---- Header ---- */
+header {
+    max-width: 1280px;
+    height: 80px;
+    background: tomato;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header img {
+    width: 50px;
+}
+
+header .logo {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+header .logo h1 {
+    margin-left: 10px;
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    /* Animation for link like a underline */
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+nav a:hover {
+    color: rgb(255, 255, 162);
+    transition: all 0.3s;
+    background-size: 100% 2px;
+}
+
+nav div{
+    align-items: center;
+    position: relative;
+    width:50px;
+    height: 50px;
+}
+
+nav img{
+    width: 30px;
+    position: absolute;
+    top:12px;
+    left: 7px;
+}
+
+nav div::after{
+    content:'';
+    width:15px;
+    height: 15px;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    left:19px;
+    background-color:rgb(255, 255, 162);
+}
+
+/* ---- Center-Menu ---- */
+.center-menu {
+    width: 100%;
+    position: relative;
+}
+
+.size {
+    width: 40%;
+    min-height: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.size h2{
+    margin-top: 25px;
+}
+
+.size-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row wrap;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-around;
+}
+.size-container .form-size{
+    margin: 50px 0;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid rgb(255, 185, 185);
+    border-radius: 5px;
+}
+.size-container p{
+    font-size: 2.5rem;
+}
+
+/* ---- Pizza-Adds---- */
+
+.pizza-adds {
+    width: 40%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 50px auto;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.pizza-adds h2 {
+    margin-top: 25px;
+}
+
+.adds-portion {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+.adds {
+    text-align: center;
+    margin: 10px;
+    border: 1px solid rgb(255, 185, 185);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.adds img {
+    width: 60px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* ----  Double-Adds---- */
+.double-adds {
+    width: 40%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.double-adds h2 {
+    margin-top: 25px;
+}
+
+.double-portion {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+/* ---- Drinks ---- */
+.drinks {
+    width: 40%;
+    min-height: 150px;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.drinks h2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.drinks p {
+    margin: 5px;
+    text-align: center;
+}
+
+.drink-items {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 50px 0;
+    
+}
+.posit-drink{
+    cursor: pointer;
+    border: 1px solid rgb(255, 185, 185);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.drink-items img {
+    width: 50px;
+    margin: 15px;
+    padding: 5px;
+}
+
+/* ---- Total ---- */
+.total {
+    position: sticky;
+    top: 240px;
+    left: 100%;
+    width: 20%;
+    border: 4px solid rgb(255, 255, 162);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 15px;
+    background-color: bisque;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+
+.total button {
+    width: 70%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(211, 209, 209) ;
+    margin: 10px 0;
+}
+
+.total #order-btn:hover{
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+    background-color: rgb(207, 252, 157);
+    transition: all 0.3s;
+}
+.total #cancel-order-btn:hover {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+    background-color: rgb(255, 117, 117);
+    transition: all 0.3s;
+}
+
+.total .out p {
+    display: inline-block;
+}
+
+/* ---- Order-List ---- */
+
+.order-list{
+    width:40%;
+    min-height: 250px;
+    align-items: center;
+    margin: 50px auto;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+    display: none;
+}
+.order-list .total-amount{
+    width: 100%;
+    padding: 0;
+    height: 40px;
+    background-color: tomato;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 5px  5px 0 0;
+    margin: 0 auto;
+}
+.order-container{
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+    margin: 25px auto 0;
+}
+.order-list p{
+    margin: 10px 0 10px 50px;
+}
+.order-total{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.3rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: tomato;
+    color: white;
+    margin: 25px auto;
+}
+.order-buttons{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 auto;
+}
+.order-list .message-order{
+    margin:0;
+    padding: 10px;
+    text-align: center;
+}
+.order-list button{
+    width: 100px;
+    height: 30px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 25px;
+    background-color: rgb(211, 209, 209) ;
+}
+.order-list .order-cancel-btn:hover{
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+    background: tomato;
+    transition: all 0.3s;
+}
+.order-list .order-confirm-btn:hover{
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+    background: rgb(207, 252, 157);
+    transition: all 0.3s;
+}
+
+/* ---- Pizza ----  */
+.pizzas{
+    width: 40%;
+    display: none;
+    flex-flow: column wrap;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+    text-align: center; 
+    margin: 0 auto 100px auto;
+}
+h2{
+    margin-top: 25px;
+}
+.pizzas-position{
+    margin: 15px 0 15px 0;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+.pizza-variety{
+    width: 80%;
+    display: flex;
+    flex-flow:  column;
+    justify-content: center;
+    margin: 25px 0;
+}
+.pizza-variety h4{
+    margin-top: 20px;
+}
+.pizza-variety img{
+    width: 80%;
+    height: 200xp;
+    margin: 25px 0 0 0;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.14);
+}
+.pizza-variety p{
+    width: 80%;
+    margin: 10px auto;
+}
+.pizzas-position button{
+    margin: 10px 0 20px 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(211, 209, 209) ;
+    text-transform: uppercase;
+    outline: none;
+}
+.pizzas-position button:hover{
+    background-color: rgb(207, 252, 157);
+    transition: all .3s;
+}
+
+/* ---- Footer ---- */
+footer {
+    max-width: 1280px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: tomato;
+    margin-top: 50px;
+}
+
+footer .copyright {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+.copyright p {
+    margin: 20px;
+}
+
+.copyright span {
+    color: black;
+    text-transform: none;
+    border: 2px solid rgb(255, 255, 162);
+    border-radius: 5px;
+    padding: 5px;
+}
+footer .social {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+footer .social img {
+    width: 40px;
+}
+
+footer .social img:hover {
+    background-color: rgb(255, 255, 162);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+
+/*  ----- Media ----- */
+
+
+@media screen and (max-width: 500px) {
+    header {
+        flex-flow: column nowrap;
+        height: 100px;
+    }
+
+    nav {
+        align-items: center;
+    }
+    .size{
+        width: 90%;
+    }
+    .pizza-adds {
+        width: 90%;
+    }
+
+    .double-adds {
+        width: 90%;
+    }
+
+    .drinks {
+        width: 90%;
+    }
+
+    footer {
+        flex-flow: column nowrap;
+    }
+
+    footer .copyright {
+        width: 100%;
+    }
+
+    footer .social {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .total{
+        width: 95.5%;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .total button{
+        margin-bottom: 7px;
+        padding: 0;
+    }
+    .order-list{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pizza-adds {
+        width: 60%;
+    }
+
+    .double-adds {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pizza-adds {
+        width: 40%;
+    }
+
+    .double-adds {
+        width: 40%;
+    }
+}
+
