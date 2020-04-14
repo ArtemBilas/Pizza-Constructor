@@ -87,7 +87,7 @@ span{
 /* ---- Header ---- */
 header {
     max-width: 1280px;
-    min-height: 80px;
+    height: 80px;
     background: tomato;
     display: flex;
     flex-flow: row wrap;
@@ -555,7 +555,7 @@ footer .social img:hover {
 @media screen and (max-width: 500px) {
     header {
         flex-flow: column nowrap;
-        height: 100px;
+        min-height: 100px;
     }
 
     nav {
