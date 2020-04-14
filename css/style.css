@@ -578,6 +578,7 @@ footer .social img:hover {
         width: 90%;
     }
     footer {
+        min-height: 150px;
         flex-flow: column nowrap;
     }
 
