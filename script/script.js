@@ -233,11 +233,7 @@ function generateOrderLocal(){
                 divContainer.appendChild(divDrinks);
             }
         }
-        // divContainer.appendChild(divSize);
-        // divContainer.appendChild(divAdds);
-        // divContainer.appendChild(divDoubleA);
-        // divContainer.appendChild(divDrinks);
-        // divContainer.appendChild(divPizza);
+        
         divContainer.appendChild(divTotal);
 
         let container = document.querySelector('.order-container');
