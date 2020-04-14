@@ -580,12 +580,11 @@ footer .social img:hover {
     }
     footer {
         min-height: 150px;
-        flex-flow: column nowrap;
+        flex-flow: column ;
     }
 
     footer .copyright {
         width: 100%;
-        margin-top: 10px ;
     }
 
     footer .social {
