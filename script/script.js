@@ -11,9 +11,9 @@ let outTotal = document.querySelector('#out-total'),
     btnConfirmOrder = document.querySelector('.order-confirm-btn'),
     pizzaItems = document.querySelectorAll('.pizzas-position'),
     pizzaPage = document.querySelector('#pizza-page');
+    basket = document.querySelector('#basket');
     constructorPage = document.querySelector('#constructor-page');
    
-
 window.addEventListener('load', function(){
     if(localStorage.length > 0 ){
         generateOrderLocal();
@@ -273,8 +273,7 @@ function btnPizzaLoop(){
     loopElem(pizzaItems);
     generateOrderLocal();
 }
-
-toOrderBtn.onclick = () => {
+function toOrder(){
     if(localStorage.length > 0){
         centerMenu.classList.add('hide');
         orderList.style.display = "block";
@@ -305,6 +304,12 @@ toOrderBtn.onclick = () => {
         });
     }
 }
+toOrderBtn.addEventListener('click',function(){
+    toOrder();
+});
+basket.addEventListener('click',function(){
+    toOrder();
+});
 preOrderBtn.onclick = () => {
     cancelOrder();
 }

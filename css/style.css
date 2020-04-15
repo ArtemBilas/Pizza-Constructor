@@ -85,20 +85,19 @@ span{
 }
 
 /* ---- Header ---- */
-header {
+header{
+    background: tomato;
+    width: 100%;
+}
+.header-container{
     max-width: 1280px;
     height: 80px;
-    background: tomato;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
+    margin: 0 auto;
 }
 
 header img {
@@ -113,20 +112,7 @@ header .logo {
     justify-content: center;
     margin: 0 auto;
 }
-
-header .logo h1 {
-    margin-left: 10px;
-}
-
-nav {
-    width: 50%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    margin: 0 auto;
-}
-
-nav a {
+header a {
     text-decoration: none;
     color: black;
     margin: 10px;
@@ -139,10 +125,22 @@ nav a {
     transition: background-size .3s;
 }
 
-nav a:hover {
+header a:hover {
     color: rgb(255, 255, 162);
     transition: all 0.3s;
     background-size: 100% 2px;
+}
+
+header .logo h1 {
+    margin-left: 10px;
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
 }
 
 nav div{
@@ -168,6 +166,9 @@ nav div::after{
     top: 10px;
     left:19px;
     background-color:rgb(255, 255, 162);
+}
+nav div:hover{
+    cursor: pointer;
 }
 
 /* ---- Center-Menu ---- */
@@ -326,7 +327,7 @@ nav div::after{
 /* ---- Total ---- */
 .total {
     position: sticky;
-    top: 240px;
+    top: 268px;
     left: 100%;
     width: 20%;
     border: 4px solid rgb(255, 255, 162);
@@ -500,42 +501,31 @@ h2{
 }
 
 /* ---- Footer ---- */
-footer {
-    max-width: 1280px;
-    height: 150px;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
+footer{
     background: tomato;
-    margin-top: 50px;
+    width: 100%;
 }
-
-footer .copyright {
-    width: 50%;
+.footer-container {
+    max-width: 1280px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* flex-flow: row wrap;
+   
+    justify-content: space-between; */
     margin: 0 auto;
-    text-align: center;
-    color: black;
-    text-transform: uppercase;
 }
 
-.copyright p {
-    margin: 20px;
-}
-
-.copyright span {
-    color: black;
-    text-transform: none;
-    border: 2px solid rgb(255, 255, 162);
-    border-radius: 5px;
-    padding: 5px;
-}
 footer .social {
     width: 50%;
     display: flex;
     flex-flow: row wrap;
+    /*margin: 0 auto; */
+    justify-content: space-between; 
+    align-items: center;
+    /* background-color: brown; */
+    text-align: center;
     margin: 0 auto;
-    justify-content: space-around;
 }
 
 footer .social img {
@@ -579,7 +569,6 @@ footer .social img:hover {
         width: 90%;
     }
     footer {
-        min-height: 150px;
         flex-flow: column ;
     }
 
